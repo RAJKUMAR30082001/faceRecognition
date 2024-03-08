@@ -43,7 +43,7 @@ export class FaceDetectionService {
     console.log("results:",this.results);
 
     this.resize = faceapi.resizeResults(this.results, this.displaySize);
-    console.log("resize naan thaan",this.resize);
+    console.log("resize",this.resize);
     canva.getContext('2d').clearRect(0, 0, canva.width, canva.height);
     faceapi.draw.drawDetections(canva, this.resize);
     
@@ -70,7 +70,7 @@ export class FaceDetectionService {
 
         // const faceMatcher = new faceapi.FaceMatcher([labeledDescriptors]);
       }
-        // You can use the faceMatcher here if needed
+        
       }
 
       return  this.discriptions;
